@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# Repair paired-end reads after preprocessing.
+#
+# Usage:
+#   cat sample_list.txt | xargs -n 1 bash repair_reads.sh
+#
+# Input:
+#   One R1 FASTQ filename provided as the first argument.
+#   The corresponding R2 filename is inferred by replacing
+#   1.fastq.gz with 2.fastq.gz.
+#
+# Edit DIR before running.
+
+DIR="/path/to/preprocessed_fastq_files"
+
+R1=$1
+R2=${R1/1.fastq.gz/2.fastq.gz}
+name=${R1/_1.fastq.gz/}
+
+echo
+echo "Processing $R1"
+echo "R1: $R1"
+echo "R2: $R2"
+echo
+
+repair.sh \
+    in1="$DIR/$R1" \
+    in2="$DIR/$R2" \
+    out1="repair_$R1" \
+    out2="repair_$R2" \
+    outs="single_$name.fq" \
+    -Xmx48g \
+    ziplevel=5
