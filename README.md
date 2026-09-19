@@ -44,3 +44,36 @@ scripts/
 
 results/
     Summary results
+
+Software
+
+The workflows were implemented using:
+
+BBTools v39.01
+fastp v0.23.2
+Trinity v2.15.1 and v2.15.2
+rnaSPAdes v3.15.5
+ORNA v2.0
+GSNAP v2017-01-14
+SAMtools
+EvidentialGene v2022.04.05
+Subread v2.0.6
+rnaQUAST v2.3.0
+BUSCO v5.5.0 and v5.7.1
+TransDecoder v5.7.1
+DIAMOND v2.1.10
+SeqKit v2.10.1
+Python and standard Unix command-line utilities
+Data availability
+
+Raw RNA-seq reads and curated transcriptome assemblies will be made publicly available through NCBI SRA and Zenodo, respectively.
+
+Citation
+
+Manuscript in preparation.
+
+Contact
+
+María Cecilia Merino
+INIMEC-CONICET–UNC, Córdoba, Argentina
+Email: cmerino@immf.uncor.edu
