@@ -46,7 +46,7 @@ results/
     Summary results
 ```text
 
-Software
+##Software
 
 The workflows were implemented using:
 
@@ -69,11 +69,11 @@ Data availability
 
 Raw RNA-seq reads and curated transcriptome assemblies will be made publicly available through NCBI SRA and Zenodo, respectively.
 
-Citation
+##Citation
 
 Manuscript in preparation.
 
-Contact
+##Contact
 
 María Cecilia Merino
 INIMEC-CONICET–UNC, Córdoba, Argentina
