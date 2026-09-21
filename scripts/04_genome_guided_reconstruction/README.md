@@ -37,11 +37,22 @@ BAM files corresponding to individual samples were subsequently merged by cultiv
 
 ## Genome-guided assembly
 
-The merged BAM files were used as input for genome-guided transcriptome reconstruction with Trinity v2.15.2.
+Merged BAM files were used as input for genome-guided transcriptome reconstruction with Trinity v2.15.2.
 
-Parameters:
+The original analysis used Trinity through a Singularity container with the following parameters:
 
-- Maximum intron length: `--genome_guided_max_intron 15000`
-- Additional read normalization disabled: `--no_normalize_reads`
+- `--genome_guided_bam`
+- `--max_memory 40G`
+- `--CPU 5`
+- `--no_normalize_reads`
+- `--genome_guided_max_intron 15000`
+
+The corresponding script is:
+
+`trinity_genome_guided.sh`
 
 The resulting genome-guided transcriptomes were subsequently curated using EvidentialGene.
+
+## Scripts
+
+- `trinity_genome_guided.sh` — performs genome-guided transcriptome reconstruction with Trinity v2.15.2 using the parameters from the original analysis.
