@@ -1,0 +1,94 @@
+# Genome-guided preprocessing workflow
+#
+# This Snakefile preserves the commands and parameters used
+# in the original analysis. Local filesystem paths were replaced
+# with generic user-editable paths.
+
+TRINITY_IMAGE = "/path/to/trinityrnaseq.v2.15.2.simg"
+GSNAP_DB_DIR = "/path/to/gsnap_database"
+GSNAP_DB_NAME = "big_ancestros"
+
+SAMPLES, = glob_wildcards("datos/{sample}_1.fastq.gz")
+
+print(SAMPLES)
+
+
+# Expected workflow outputs
+rule all:
+    input:
+        expand("resultados/{sample}.sorted.bam", sample=SAMPLES),
+        expand("resultados/{sample}_1.fastq.gz", sample=SAMPLES),
+        expand("resultados/{sample}_2.fastq.gz", sample=SAMPLES)
+
+
+# In silico read normalization with Trinity v2.15.2
+rule normalize:
+    input:
+        r1="datos/{sample}_1.fastq.gz",
+        r2="datos/{sample}_2.fastq.gz"
+    output:
+        r1="intermedios/{sample}_1.fastq.gz.normalized_K25_maxC50_minC0_maxCV10000.fq",
+        r2="intermedios/{sample}_2.fastq.gz.normalized_K25_maxC50_minC0_maxCV10000.fq"
+    shell:
+        """
+        singularity exec {TRINITY_IMAGE} \
+        /usr/local/bin/util/insilico_read_normalization.pl \
+        --seqType fq \
+        --left {input.r1} \
+        --right {input.r2} \
+        --output intermedios/ \
+        -JM 20G \
+        --pairs_together \
+        --max_cov 50 \
+        --SS_lib_type FR \
+        --CPU 10
+        """
+
+
+# Alignment against the combined diploid-progenitor reference using GSNAP
+rule align:
+    input:
+        r1="intermedios/{sample}_1.fastq.gz.normalized_K25_maxC50_minC0_maxCV10000.fq",
+        r2="intermedios/{sample}_2.fastq.gz.normalized_K25_maxC50_minC0_maxCV10000.fq"
+    output:
+        temp("intermedios/{sample}.sam")
+    shell:
+        """
+        gsnap \
+        -D {GSNAP_DB_DIR} \
+        --db {GSNAP_DB_NAME} \
+        -A sam \
+        -t 10 \
+        -B 2 \
+        --output-file {output} \
+        {input.r1} {input.r2}
+        """
+
+
+# Convert SAM to BAM and sort by coordinates
+rule sort_bam:
+    input:
+        "intermedios/{sample}.sam"
+    output:
+        "resultados/{sample}.sorted.bam"
+    shell:
+        """
+        samtools view -bS {input} | \
+        samtools sort -o {output}
+        """
+
+
+# Auxiliary extraction of paired FASTQ files from sorted BAM
+rule extract_fastq:
+    input:
+        bam="resultados/{sample}.sorted.bam"
+    output:
+        r1="resultados/{sample}_1.fastq.gz",
+        r2="resultados/{sample}_2.fastq.gz"
+    shell:
+        """
+        samtools fastq \
+        -1 {output.r1} \
+        -2 {output.r2} \
+        {input.bam}
+        """
