@@ -46,6 +46,4 @@ The scripts were generalized only for input/output file handling; their original
 
 For the read-classification-based workflow, the original Subread alignment produced BAM output. The exact intermediate command used to prepare the alignment text processed by the filtering scripts has not yet been recovered.
 
-Filtered transcriptomes were subsequently realigned against the *T. frezzii* reference genome as an additional check of residual fungal sequence removal.
-
 The resulting filtered transcript sets were used as the final peanut transcriptomes for downstream quality assessment and coding-sequence prediction.
