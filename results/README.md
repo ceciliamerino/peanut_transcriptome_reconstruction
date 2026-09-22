@@ -1,6 +1,6 @@
 # Results
 
-This directory contains summary results generated during the comparative evaluation of peanut transcriptome reconstruction strategies.
+This directory documents summary results generated during the comparative evaluation of peanut transcriptome reconstruction strategies.
 
 Two transcriptome reconstruction approaches were evaluated independently for three *Arachis hypogaea* cultivars (Granoleico, FAVar-2, and Ascasubi):
 
