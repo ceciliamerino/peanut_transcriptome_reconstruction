@@ -50,6 +50,6 @@ These analyses were used to characterize sequence-similarity support for predict
 
 ## Data availability
 
-Curated transcriptome assemblies and associated datasets will be deposited in Zenodo.
+Curated transcriptome assemblies and associated datasets have been deposited in Zenodo.
 
 Raw RNA-seq reads are deposited in the NCBI Sequence Read Archive (SRA).
