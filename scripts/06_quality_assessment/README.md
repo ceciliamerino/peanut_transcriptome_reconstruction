@@ -1,38 +1,93 @@
 # Transcriptome quality assessment
 
-This directory documents the quality and completeness assessment of the reconstructed peanut transcriptomes.
+This directory documents the quality and completeness assessment of peanut transcriptomes generated using the read-classification-based and genome-guided reconstruction strategies.
 
-Quality assessment was performed at key stages of both transcriptome reconstruction strategies.
+Quality assessment was performed at key stages of both reconstruction workflows using rnaQUAST, BUSCO, and `stats.sh` from BBTools.
 
 ## Read-classification-based reconstruction
 
-The following transcript sets were evaluated:
+For each cultivar, three transcript sets were evaluated together using rnaQUAST v2.3.0:
 
-- Trinity assemblies
-- rnaSPAdes assemblies
-- Final read-classification-based transcriptomes
+1. the Trinity assembly,
+2. the rnaSPAdes assembly, and
+3. the final transcriptome obtained after EvidentialGene curation and removal of residual fungal sequences.
+
+The recovered rnaQUAST command used:
+
+- 12 threads
+- paired-end reads
+- `--min_alignment 50`
+- `--busco fabales_odb10`
+- `--lower_threshold 50`
+- `--upper_threshold 95`
+- `--strand_specific`
+
+BUSCO v5.7.1 was executed through rnaQUAST using the `fabales_odb10` lineage dataset.
+
+A generalized implementation is provided in:
+
+`rnaquast_read_classification.sh`
 
 ## Genome-guided reconstruction
 
-The following transcript sets were evaluated:
+For each cultivar, two transcript sets were evaluated together using rnaQUAST v2.3.0:
 
-- Initial Trinity genome-guided assemblies
-- Final genome-guided transcriptomes
+1. the initial Trinity genome-guided assembly, and
+2. the final genome-guided transcriptome obtained after EvidentialGene curation and removal of residual fungal sequences.
 
-## rnaQUAST and BUSCO
+The recovered rnaQUAST commands used the same assessment parameters as the read-classification-based workflow:
 
-Transcriptome structure and gene completeness were assessed using rnaQUAST v2.3.0 in strand-specific mode.
+- 12 threads
+- paired-end reads
+- `--min_alignment 50`
+- `--busco fabales_odb10`
+- `--lower_threshold 50`
+- `--upper_threshold 95`
+- `--strand_specific`
 
-BUSCO v5.7.1 was run using the `fabales_odb10` lineage dataset.
+BUSCO v5.7.1 was executed through rnaQUAST using the `fabales_odb10` lineage dataset.
 
-## Assembly statistics
+A generalized implementation is provided in:
 
-Basic assembly statistics, including:
+`rnaquast_genome_guided.sh`
 
-- Number of transcripts
-- Total assembled length
-- N50
+## SuperTranscript auxiliary assessment
 
-were calculated using `stats.sh` from BBTools v39.01.
+SuperTranscripts generated from the Trinity assemblies of the read-classification-based workflow were independently assessed in Galaxy using BUSCO v5.5.0.
 
-Direct comparisons between reconstruction strategies were based on the corresponding final transcriptomes.
+The recovered Galaxy settings included:
+
+- analysis mode: transcriptome
+- lineage dataset: `fabales_odb10`
+- lineage source: download
+- BLAST E-value cutoff: 0.001
+- candidate regions to consider: 3
+
+This analysis was used as an auxiliary quality check. SuperTranscripts were not used as input for subsequent EvidentialGene curation.
+
+Because this BUSCO analysis was performed through Galaxy, no command-line script is provided for this step.
+
+## Basic assembly statistics
+
+Basic transcriptome statistics were additionally calculated using `stats.sh` from BBTools v39.01.
+
+For the read-classification-based workflow, statistics were calculated for:
+
+- Trinity assemblies,
+- rnaSPAdes assemblies, and
+- final filtered transcriptomes.
+
+For the genome-guided workflow, statistics were calculated for:
+
+- initial Trinity genome-guided assemblies, and
+- final filtered genome-guided transcriptomes.
+
+A generalized implementation is provided in:
+
+`assembly_stats.sh`
+
+## Scripts
+
+- `rnaquast_read_classification.sh` — evaluates Trinity, rnaSPAdes, and final read-classification-based transcriptomes with rnaQUAST.
+- `rnaquast_genome_guided.sh` — evaluates initial Trinity genome-guided and final genome-guided transcriptomes with rnaQUAST.
+- `assembly_stats.sh` — calculates basic assembly statistics using `stats.sh` from BBTools.
