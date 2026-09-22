@@ -62,3 +62,4 @@ For each cultivar, the Trinity and rnaSPAdes transcript sets were concatenated p
 
 - `combine_host_reads.sh` — combines initially retained host reads with additional host reads recovered using BBMap.
 - `orna_normalization.sh` — normalizes combined paired-end reads with ORNA prior to rnaSPAdes assembly.
+- `evidentialgene_curation.sh` — curates the concatenated Trinity and rnaSPAdes transcript sets using EvidentialGene.
