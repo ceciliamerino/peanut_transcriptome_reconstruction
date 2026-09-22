@@ -40,7 +40,7 @@ resources/
 scripts/
     01_preprocessing/
     02_read_classification/
-    03_denovo_reconstruction/
+    03_de_novo_reconstruction/
     04_genome_guided_reconstruction/
     05_fungal_filtering/
     06_quality_assessment/
