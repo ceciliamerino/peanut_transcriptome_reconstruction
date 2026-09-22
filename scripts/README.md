@@ -14,5 +14,3 @@ The workflow is organized into the following stages:
 - `08_protein_analysis/` — protein deduplication, protein-length statistics, and homology analyses.
 
 Some analyses were performed through the Galaxy platform and are therefore documented in the corresponding README files rather than represented by command-line scripts.
-
-Additional custom scripts will be added from the original analysis files where applicable.
