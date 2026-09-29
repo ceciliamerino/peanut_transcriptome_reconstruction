@@ -85,7 +85,12 @@ For each dataset, the following DIAMOND-derived variables were retained:
 
 The six datasets were concatenated into a single pooled dataset for the final protein-homology assessment.
 
-The pooled dataset was used to generate:
+Spearman rank correlations were calculated for:
+
+1. alignment length versus bit score, and
+2. percent identity versus bit score.
+
+The pooled dataset was also used to generate:
 
 1. bit score versus alignment length,
 2. bit score versus percent identity, and
@@ -104,14 +109,14 @@ Predicted proteins from TransDecoder
 → unique predicted proteins  
 → protein-length summary statistics
 
-DIAMOND BLASTp `outfmt 6`  
-→ processed DIAMOND CSV files  
-→ pooling of the six cultivar × reconstruction-strategy datasets  
-→ protein-homology plots
+DIAMOND BLASTp `outfmt 6`\
+→ processed DIAMOND CSV files\
+→ pooling of the six cultivar × reconstruction-strategy datasets\
+→ Spearman correlations and protein-homology plots
 
 ## Scripts
 
 - `01_seqkit_deduplicate.sh` — removes duplicate predicted protein sequences using SeqKit.
 - `02_protein_length_summary.py` — calculates N, median, P99, and maximum protein length from unique protein sequences.
 - `03_prepare_diamond_output.py` — converts standard DIAMOND BLASTp `outfmt 6` results into labeled CSV tables.
-- `04_plot_pooled_diamond.py` — pools processed DIAMOND results from all six datasets and generates the final protein-homology plots.
+- `04_plot_pooled_diamond.py` — pools processed DIAMOND results from all six datasets, calculates Spearman rank correlations, and generates the final protein-homology plots.
