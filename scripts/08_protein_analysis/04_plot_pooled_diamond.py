@@ -120,6 +120,27 @@ df_all = pd.concat(
 print(f"Input files: {len(args.inputs)}")
 print(f"Total alignments: {len(df_all):,}")
 
+# ======================== SPEARMAN CORRELATIONS ========================
+
+rho_alignment = df_all["alignment_length"].corr(
+    df_all["bit_score"],
+    method="spearman"
+)
+
+rho_identity = df_all["percent_identity"].corr(
+    df_all["bit_score"],
+    method="spearman"
+)
+
+print(
+    f"Spearman rho (alignment length vs bit score): "
+    f"{rho_alignment:.4f}"
+)
+
+print(
+    f"Spearman rho (percent identity vs bit score): "
+    f"{rho_identity:.4f}"
+)
 
 # ======================== FIGURE 4A ========================
 
