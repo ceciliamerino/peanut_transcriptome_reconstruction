@@ -12,7 +12,7 @@ The recovered command used:
 
 `seqkit rmdup -s predicted_proteins.pep -o unique_proteins.pep`
 
-The `-s` option removes duplicate sequences based on sequence identity.
+The `-s` option removes duplicate sequences based on the full sequence.
 
 This step was applied independently to the predicted proteins from each cultivar and reconstruction strategy.
 
