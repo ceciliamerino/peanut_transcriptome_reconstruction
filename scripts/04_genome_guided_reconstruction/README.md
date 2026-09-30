@@ -56,6 +56,6 @@ The resulting genome-guided transcriptomes were subsequently curated using Evide
 ## Scripts
 
 - `Snakefile` — performs Trinity in silico read normalization, alignment of normalized reads to the combined diploid-progenitor reference using GSNAP, and conversion of alignment files to coordinate-sorted BAM format.
-- `merge_bams_by_cultivar.sh` — merges and sorts sample-level BAM files by cultivar.
-- `trinity_genome_guided.sh` — reconstructs genome-guided transcriptomes from cultivar-level merged BAM files using Trinity.
+- `merge_bams_by_cultivar.sh` — merges and sorts sample-level BAM files by genotype.
+- `trinity_genome_guided.sh` — reconstructs genome-guided transcriptomes from genotype-level merged BAM files using Trinity.
 - `evidentialgene_curation.sh` — curates the genome-guided Trinity transcriptomes using EvidentialGene.
