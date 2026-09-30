@@ -33,7 +33,7 @@ Normalized reads were aligned to the combined diploid-progenitor reference using
 
 Alignment files were converted to coordinate-sorted BAM files using SAMtools.
 
-BAM files corresponding to individual samples were subsequently merged by cultivar.
+BAM files corresponding to individual samples were subsequently merged by genotype.
 
 ## Genome-guided assembly
 
