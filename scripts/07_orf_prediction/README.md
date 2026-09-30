@@ -2,7 +2,7 @@
 
 This directory documents coding-sequence prediction for the final peanut transcriptomes generated using the read-classification-based and genome-guided reconstruction strategies.
 
-The same ORF-prediction workflow was applied independently to the final transcriptome of each cultivar and reconstruction strategy.
+The same ORF-prediction workflow was applied independently to the final transcriptome of each genotype and reconstruction strategy.
 
 ## 1. Identification of candidate long ORFs
 
