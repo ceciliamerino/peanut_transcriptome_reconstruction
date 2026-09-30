@@ -3,7 +3,7 @@
 # Builds the BBSplit reference database used for host-pathogen read classification.
 #
 # Reference genome assemblies are listed in:
-# ../../resources/reference_genomes.md
+# ../../resources/README.md
 #
 # Edit the paths to the reference FASTA files before running.
 
