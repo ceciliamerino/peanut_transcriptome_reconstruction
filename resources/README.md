@@ -6,7 +6,7 @@ Reference genome assemblies used in the transcriptome reconstruction workflows.
 
 Preprocessed RNA-seq reads were classified using BBSplit against four *Arachis hypogaea* genome assemblies and the draft *Thecaphora frezzii* genome assembly.
 
-### Arachis hypogaea
+### *Arachis hypogaea*
 
 | Genome assembly | Accession | Source |
 |---|---|---|
@@ -15,7 +15,7 @@ Preprocessed RNA-seq reads were classified using BBSplit against four *Arachis h
 | Fuhuasheng.gnm1.XX5Y | GCA_004170445.1 | PeanutBase / LegumeInfo |
 | BaileyII.gnm1.1JTF | GCA_028451205.1 | PeanutBase / LegumeInfo |
 
-### Thecaphora frezzii
+### *Thecaphora frezzii*
 
 | Genome assembly | Accession | Source |
 |---|---|---|
