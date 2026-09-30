@@ -15,6 +15,15 @@ The workflow was applied independently to Granoleico, FAVar-2, and Ascasubi.
 
 ## Genome-guided reconstruction
 
-`genome_guided_pipeline`
+Files:
 
-Read normalization, alignment to the combined *Arachis duranensis* and *Arachis ipaensis* reference, genome-guided Trinity assembly, transcriptome curation, removal of residual fungal sequences, quality assessment, ORF prediction, and protein homology assessment.
+- `Pipeline_GG.png`
+- `Pipeline_GG.svg`
+
+The diagram summarizes RNA-seq preprocessing, Trinity in silico read normalization, alignment to the combined Arachis duranensis and Arachis ipaensis reference using GSNAP, BAM processing and merging with SAMtools, genome-guided reconstruction with Trinity, transcriptome curation with EvidentialGene, removal of residual fungal sequences using Subread and custom Python filtering scripts, quality assessment, ORF prediction, and protein homology assessment.
+
+The workflow was applied independently to Granoleico, FAVar-2, and Ascasubi.
+
+## File formats
+
+PNG files are provided for direct visualization in GitHub, while SVG files provide editable vector versions of the workflow diagrams.
