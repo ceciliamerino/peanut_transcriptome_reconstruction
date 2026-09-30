@@ -4,6 +4,14 @@ This directory documents the identification and removal of residual *Thecaphora 
 
 Fungal-sequence filtering was performed after EvidentialGene curation in both transcriptome reconstruction strategies.
 
+## Subread index construction
+
+Before alignment, a Subread index was built from the *T. frezzii* reference genome assembly ASM2628400v1 (GCA_026284005.1) using `subread-buildindex`.
+
+A generalized implementation is provided in:
+
+`subread_buildindex.sh`
+
 ## Read-classification-based reconstruction
 
 EvidentialGene-curated transcriptomes (`*.okay.mrna`) were aligned against the *T. frezzii* reference genome using Subread v2.0.6.
@@ -58,6 +66,7 @@ The resulting filtered transcript sets were used as the final peanut transcripto
 
 ## Scripts
 
+- `subread_buildindex.sh` — builds the Subread index from the *T. frezzii* reference genome.
 - `subread_alignment_read_classification.sh` — aligns read-classification-based EvidentialGene-curated transcriptomes against the *T. frezzii* genome.
 - `bam_to_sam.sh` — converts Subread BAM output to SAM format for downstream filtering.
 - `subread_alignment_genome_guided.sh` — aligns genome-guided EvidentialGene-curated transcriptomes against the *T. frezzii* genome and generates SAM output directly.
