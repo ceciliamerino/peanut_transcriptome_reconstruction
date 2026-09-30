@@ -1,8 +1,8 @@
 # Comparative Transcriptome Reconstruction Strategies in Peanut under *Thecaphora frezzii* Infection
 
-This repository contains the bioinformatics workflows used to reconstruct and evaluate transcriptomes of *Arachis hypogaea* cultivars under *Thecaphora frezzii* infection.
+This repository contains the bioinformatics workflows used to reconstruct and evaluate transcriptomes of *Arachis hypogaea* genotypes under *Thecaphora frezzii* infection.
 
-Two complementary transcriptome reconstruction strategies were compared: a read-classification-based de novo approach and a genome-guided approach. The workflows include RNA-seq preprocessing, host-pathogen read classification, transcriptome reconstruction, EvidentialGene curation, removal of residual fungal sequences, transcriptome quality assessment, ORF prediction, and protein sequence analyses.
+Two complementary transcriptome reconstruction strategies were compared: a read-classification-based *de novo* approach and a genome-guided approach. The workflows include RNA-seq preprocessing, host-pathogen read classification, transcriptome reconstruction, EvidentialGene curation, removal of residual fungal sequences, transcriptome quality assessment, ORF prediction, and protein sequence analyses.
 
 Three peanut cultivars were analyzed independently: Granoleico, FAVar-2, and Ascasubi.
 
