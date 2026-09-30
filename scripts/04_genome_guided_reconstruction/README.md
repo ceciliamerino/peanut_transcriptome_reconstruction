@@ -2,7 +2,7 @@
 
 This directory documents the genome-guided transcriptome reconstruction workflow used for *Arachis hypogaea*.
 
-The workflow was applied independently to each cultivar.
+The workflow was applied independently to each genotype.
 
 ## Read normalization
 
