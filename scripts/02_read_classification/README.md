@@ -16,7 +16,7 @@ Reference genome information is provided in:
 
 Reads assigned to the *T. frezzii* bin together with reads remaining unassigned after BBSplit classification were remapped against the four *Arachis hypogaea* reference genome assemblies using BBMap.
 
-Reads mapping to the peanut references were recovered and combined by cultivar for subsequent de novo transcriptome reconstruction.
+Reads mapping to the peanut references were recovered and combined by genotype for subsequent *de novo* transcriptome reconstruction.
 
 ## Scripts
 
