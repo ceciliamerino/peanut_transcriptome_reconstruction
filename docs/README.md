@@ -4,9 +4,14 @@ This directory contains schematic representations of the two transcriptome recon
 
 ## Read-classification-based de novo reconstruction
 
-`read_classification_pipeline`
+Files:
 
-RNA-seq preprocessing, host–pathogen read classification, de novo assembly with Trinity and rnaSPAdes, transcriptome curation, removal of residual fungal sequences, quality assessment, ORF prediction, and protein homology assessment.
+- `Pipeline_RC_based.png`
+- `Pipeline_RC_based.svg`
+
+The diagram summarizes RNA-seq preprocessing, host–pathogen read classification, de novo assembly with Trinity and rnaSPAdes, transcriptome curation, removal of residual fungal sequences, quality assessment, ORF prediction, and protein homology assessment.
+
+The workflow was applied independently to Granoleico, FAVar-2, and Ascasubi.
 
 ## Genome-guided reconstruction
 
