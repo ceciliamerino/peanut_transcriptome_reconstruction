@@ -6,7 +6,7 @@ Quality assessment was performed at key stages of both reconstruction workflows 
 
 ## Read-classification-based reconstruction
 
-For each cultivar, three transcript sets were evaluated together using rnaQUAST v2.3.0:
+For each genotype, three transcript sets were evaluated together using rnaQUAST v2.3.0:
 
 1. the Trinity assembly,
 2. the rnaSPAdes assembly, and
@@ -30,7 +30,7 @@ A generalized implementation is provided in:
 
 ## Genome-guided reconstruction
 
-For each cultivar, two transcript sets were evaluated together using rnaQUAST v2.3.0:
+For each genotype, two transcript sets were evaluated together using rnaQUAST v2.3.0:
 
 1. the initial Trinity genome-guided assembly, and
 2. the final genome-guided transcriptome obtained after EvidentialGene curation and removal of residual fungal sequences.
