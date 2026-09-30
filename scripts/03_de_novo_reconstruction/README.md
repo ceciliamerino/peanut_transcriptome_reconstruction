@@ -2,7 +2,7 @@
 
 This directory documents the read-classification-based de novo transcriptome reconstruction workflow.
 
-The workflow was applied independently to each *Arachis hypogaea* cultivar.
+The workflow was applied independently to each *Arachis hypogaea* genotype.
 
 ## Host-read combination
 
@@ -56,7 +56,7 @@ Parameters:
 
 ## Assembly combination
 
-For each cultivar, the Trinity and rnaSPAdes transcript sets were concatenated prior to transcriptome curation with EvidentialGene.
+For each genotype, the Trinity and rnaSPAdes transcript sets were concatenated prior to transcriptome curation with EvidentialGene.
 
 ## Scripts
 
