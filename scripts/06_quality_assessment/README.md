@@ -86,8 +86,17 @@ A generalized implementation is provided in:
 
 `assembly_stats.sh`
 
+## Read concatenation for rnaQUAST
+
+For transcriptome quality assessment with rnaQUAST, paired-end reads from the libraries corresponding to each genotype were concatenated separately for R1 and R2.
+
+A generalized implementation is provided in:
+
+`concatenate_reads_for_rnaquast.sh`
+
 ## Scripts
 
+- `concatenate_reads_for_rnaquast.sh` — concatenates R1 and R2 read files separately for rnaQUAST assessment.
 - `rnaquast_read_classification.sh` — evaluates Trinity, rnaSPAdes, and final read-classification-based transcriptomes with rnaQUAST.
 - `rnaquast_genome_guided.sh` — evaluates initial Trinity genome-guided and final genome-guided transcriptomes with rnaQUAST.
 - `assembly_stats.sh` — calculates basic assembly statistics using `stats.sh` from BBTools.
