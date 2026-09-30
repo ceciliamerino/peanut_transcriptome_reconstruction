@@ -14,7 +14,7 @@ The recovered command used:
 
 The `-s` option removes duplicate sequences based on the full sequence.
 
-This step was applied independently to the predicted proteins from each cultivar and reconstruction strategy.
+This step was applied independently to the predicted proteins from each genotype and reconstruction strategy.
 
 A generalized implementation is provided in:
 
@@ -24,7 +24,7 @@ A generalized implementation is provided in:
 
 Protein-length statistics were calculated from the deduplicated protein FASTA files.
 
-For each cultivar and reconstruction strategy, the following metrics were calculated:
+For each genotype and reconstruction strategy, the following metrics were calculated:
 
 - number of unique protein sequences (N)
 - median protein length
@@ -33,7 +33,7 @@ For each cultivar and reconstruction strategy, the following metrics were calcul
 
 Protein lengths were calculated in amino acids from the FASTA sequences.
 
-The original analysis appended one row per cultivar and reconstruction strategy to a tab-separated summary table.
+The original analysis appended one row per genotype and reconstruction strategy to a tab-separated summary table.
 
 A generalized implementation is provided in:
 
@@ -111,7 +111,7 @@ Predicted proteins from TransDecoder
 
 DIAMOND BLASTp `outfmt 6`\
 → processed DIAMOND CSV files\
-→ pooling of the six cultivar × reconstruction-strategy datasets\
+→ pooling of the six genotype × reconstruction-strategy datasets\
 → Spearman correlations and protein-homology plots
 
 ## Scripts
