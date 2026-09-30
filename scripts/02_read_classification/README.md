@@ -10,7 +10,7 @@ Reads assigned to any of the four peanut reference genomes were retained as host
 
 Reference genome information is provided in:
 
-`../../resources/reference_genomes.md`
+`../../resources/README.md`
 
 ## Step 2. Reference-guided host-read recovery (BBMap)
 
