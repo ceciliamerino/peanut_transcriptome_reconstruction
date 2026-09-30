@@ -2,7 +2,7 @@
 
 # Classifies paired-end RNA-seq reads using BBSplit against host and pathogen reference genomes.
 # The BBSplit reference database is described in:
-# ../../resources/reference_genomes.md
+# ../../resources/README.md
 #
 # Usage:
 #   cat sample_list.txt | xargs -n 1 bash bbsplit_classification.sh
