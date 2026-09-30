@@ -71,12 +71,6 @@ The workflows were implemented using:
 - SeqKit v2.10.1
 - Python and standard Unix command-line utilities
 
-## Data availability
-
-Raw RNA-seq reads have been deposited in the NCBI Sequence Read Archive (SRA). Curated transcriptome assemblies and associated datasets have been deposited in Zenodo.
-
-Accession numbers and DOI information will be added upon finalization of the associated manuscript.
-
 ## Citation
 
 Manuscript in preparation.
