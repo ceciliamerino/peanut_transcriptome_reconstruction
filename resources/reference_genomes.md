@@ -6,14 +6,14 @@ Reference genome assemblies used in the transcriptome reconstruction workflows.
 
 Preprocessed reads were classified using BBSplit against four *Arachis hypogaea* genome assemblies and the draft *Thecaphora frezzii* genome assembly.
 
-### Arachis hypogaea
+### *Arachis hypogaea*
 
 - Tifrunner.gnm2.J5K5 — GCA_003086295.3
 - Shitouqi.gnm1.L4VP — GCA_003713155.1
 - Fuhuasheng.gnm1.XX5Y — GCA_004170445.1
 - BaileyII.gnm1.1JTF — GCA_028451205.1
 
-### Thecaphora frezzii
+### *Thecaphora frezzii*
 
 - ASM2628400v1 — GCA_026284005.1
 
